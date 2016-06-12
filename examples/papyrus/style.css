@@ -1,0 +1,37 @@
+input[type=range] {
+    background: inherit;
+}
+
+.percent {
+    width: 24px;
+}
+
+.spectrum {
+    position: relative;
+    display: inline-block;
+    padding: 6px 0;
+}
+
+.spectrum .track {
+    width: inherit;
+    height: 8px;
+    border-radius: 4px;
+    background: #CCC;
+}
+
+.spectrum .thumb {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    top: 3px;
+    background: #333;
+}
+
+.spectrum .fill {
+    position: absolute;
+    top: 6px;
+    height: 8px;
+    border-radius: 4px;
+    background: #333;
+}

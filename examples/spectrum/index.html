@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="../../script/spectrum.js"></script>
+        <script type="text/javascript" src="script.js" async></script>
+        <title>Spectrum demonstration</title>
+    </head>
+
+    <body>
+        <h1>Spectrum demonstration</h1>
+        <p>Spectrum is a plain JavaScript implementation of the range input
+        control. If you have ever tried to style a range input control, you
+        know how painful is to obtain a consistent look among all browsers:
+        spectrum tries to solve this problem by adding as little overhead as
+        possible.</p>
+
+        <h2>Simple to use</h2>
+        <p>You only need to call <span class="mono">Spectrum.attach()</span>
+        and you'll have your customized range input!</p>
+        
+        <h2>Native behaviour</h2>
+        <p>Spectrum is responsive to keypresses, mouse events and tab stops
+        just like native range inputs.</p>
+        <div class="table">
+            <div class="tr">
+                <h3>Spectrum</h3>
+                <h3>Native</h3>
+            </div>
+            <div class="tr">
+                <form id="spectrum">
+                    <div>
+                        <label for="spectrum-input">oninput</label> 
+                        <input type="text" readonly id="spectrum-input" 
+                                                    class="percent" maxlength="3">
+
+                        <label for="spectrum-change">onchange</label>
+                        <input type="text" readonly id="spectrum-change" 
+                                                    class="percent" maxlength="3">
+                    </div>
+                    <input id="spectrum-range" type="range">
+                    <button id="spectrum-reset" type="button">
+                        Reset 
+                    </button>
+                </form>
+                <form id="natural">
+                    <div>
+                        <label for="natural-input">oninput</label> 
+                        <input type="text" readonly id="natural-input" 
+                                                    class="percent" maxlength="3">
+
+                        <label for="natural-change">onchange</label>
+                        <input type="text" readonly id="natural-change" 
+                                                    class="percent" maxlength="3">
+                    </div>
+                    <input id="natural-range" type="range">
+                    <button id="natural-reset" type="button">
+                        Reset 
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <h2>Native programming interface</h2> 
+        <p>You use spectrum the same way you would use a range input (see the
+        <a href="script.js">javascript source code of the previous example</a>).</p>
+
+        <h2>Vertical rendering</h2>
+        <p>According to the standard, range inputs are rendered vertically <a
+            href="https://www.w3.org/TR/html5/forms.html#range-state-(type=range)">
+        when their height is larger than their width</a>. Ironically, spectrum
+        is more HTML5 compliant than the native rendering by most browsers, since
+        to obtain a vertical range input you do just that:</p>
+
+        <p><em>Under construction</em></p>
+
+        <h2>Minimal by design</h2>
+        <p><span class="mono">spectrum.js</span> is only ~250 lines long. It
+        also has no dependencies whatsoever, as it's written in plain
+        JavaScript.</p>
+    </body>
+
+</html>

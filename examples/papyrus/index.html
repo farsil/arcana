@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="spectrum.css">
+        <script type="text/javascript" src="../../script/spectrum.js"></script>
+        <!-- <script type="text/javascript" src="papyrus.js"></script> -->
+        <title>Arcana developement page</title>
+    </head>
+
+    <body>
+        <h1>Spectrum demonstration</h1>
+        <input id="rng-spectrum" type="range"><br> 
+        <label>oninput
+            <input type="text" readonly id="txt-input" class="percent" maxlength="3">
+        </label> 
+        <label>onchange
+            <input type="text" readonly id="txt-change" class="percent" maxlength="3">
+        </label><br/>
+
+        <input type="text" id="txt-update" class="percent" maxlength="3">
+        <button id="btn-update" type="button">
+           Update 
+        </button>
+        <h1> Papyrus demonstration</h1>
+        <div id="papyrus">
+            Ipsa dolores beatae repellendus voluptate corrupti est dolor
+            aut. Eius perferendis voluptates excepturi maxime ipsa. Sunt
+            laudantium ut maiores nihil.  Esse impedit sit aspernatur
+            veritatis ratione. Corporis odit eveniet nisi beatae at in
+            occaecati. Qui et aut aliquam ea. Quia quam sit a sapiente et
+            quia omnis.  Minima non et natus quod quia excepturi.
+            Provident ea consectetur ea. Autem voluptas doloremque et
+            consequatur ut fuga suscipit. Expedita corporis aut quis
+            occaecati. Ducimus asperiores expedita nulla et non saepe.
+            Reiciendis autem quis quia et. Dicta aliquid quia tenetur
+            rerum doloremque omnis ut aperiam. Et fugiat facilis
+            voluptatem eum. Ex nihil ipsa minus excepturi deleniti fuga
+            enim.  At deleniti minima labore aut laboriosam et dolores
+            voluptatem. Ipsa eos harum et. Et non nam eligendi magnam
+            saepe. Qui consequuntur impedit sed alias culpa voluptatibus.
+            Voluptas explicabo minus in sunt molestiae.
+        </div>
+        <div>
+            Ipsa dolores beatae repellendus voluptate corrupti est dolor
+            aut. Eius perferendis voluptates excepturi maxime ipsa. Sunt
+            laudantium ut maiores nihil.  Esse impedit sit aspernatur
+            veritatis ratione. Corporis odit eveniet nisi beatae at in
+            occaecati. Qui et aut aliquam ea. Quia quam sit a sapiente et
+            quia omnis.  Minima non et natus quod quia excepturi.
+            Provident ea consectetur ea. Autem voluptas doloremque et
+            consequatur ut fuga suscipit. Expedita corporis aut quis
+            occaecati. Ducimus asperiores expedita nulla et non saepe.
+            Reiciendis autem quis quia et. Dicta aliquid quia tenetur
+            rerum doloremque omnis ut aperiam. Et fugiat facilis
+            voluptatem eum. Ex nihil ipsa minus excepturi deleniti fuga
+            enim.  At deleniti minima labore aut laboriosam et dolores
+            voluptatem. Ipsa eos harum et. Et non nam eligendi magnam
+            saepe. Qui consequuntur impedit sed alias culpa voluptatibus.
+            Voluptas explicabo minus in sunt molestiae.
+        </div>
+
+        <script type="text/javascript">
+            // Don't do it in real code, it's convenient for the demo
+            rngSpectrum = document.getElementById('rng-spectrum');
+            btnUpdate = document.getElementById('btn-update');
+            txtUpdate = document.getElementById('txt-update');
+            txtChange = document.getElementById('txt-change');
+            txtInput = document.getElementById('txt-input');
+
+            function updateTxtChange() 
+            {
+                txtChange.value = rngSpectrum.value;
+            }
+
+            function updateTxtInput() 
+            {
+                txtInput.value = rngSpectrum.value;
+            }
+
+            function updateRngSpectrum()
+            {
+                rngSpectrum.value = txtUpdate.value;
+                txtUpdate.value = rngSpectrum.value;
+                txtChange.value = rngSpectrum.value;
+                txtInput.value = rngSpectrum.value;
+            }
+
+            Spectrum.attach("spectrum", "#rng-spectrum");
+
+            rngSpectrum.addEventListener("change", updateTxtChange);
+            rngSpectrum.addEventListener("input", updateTxtInput);
+            btnUpdate.addEventListener("click", updateRngSpectrum);
+
+            txtUpdate.value = rngSpectrum.value;
+            updateRngSpectrum();
+
+        </script>
+    </body>
+
+</html>
