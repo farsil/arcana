@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="spectrum.css">
         <link rel="stylesheet" type="text/css" href="style.css">
         <script type="text/javascript" src="../../script/spectrum.js"></script>
         <script type="text/javascript" src="script.js" async></script>
@@ -24,11 +25,11 @@
         <p>Spectrum is responsive to keypresses, mouse events and tab stops
         just like native range inputs.</p>
         <div class="table">
-            <div class="tr">
+            <div>
                 <h3>Spectrum</h3>
                 <h3>Native</h3>
             </div>
-            <div class="tr">
+            <div>
                 <form id="spectrum">
                     <div>
                         <label for="spectrum-input">oninput</label> 
@@ -39,23 +40,23 @@
                         <input type="text" readonly id="spectrum-change" 
                                                     class="percent" maxlength="3">
                     </div>
-                    <input id="spectrum-range" type="range">
+                    <input id="spectrum-demo1" type="range">
                     <button id="spectrum-reset" type="button">
                         Reset 
                     </button>
                 </form>
-                <form id="natural">
+                <form id="native">
                     <div>
-                        <label for="natural-input">oninput</label> 
-                        <input type="text" readonly id="natural-input" 
+                        <label for="native-input">oninput</label> 
+                        <input type="text" readonly id="native-input" 
                                                     class="percent" maxlength="3">
 
-                        <label for="natural-change">onchange</label>
-                        <input type="text" readonly id="natural-change" 
+                        <label for="native-change">onchange</label>
+                        <input type="text" readonly id="native-change" 
                                                     class="percent" maxlength="3">
                     </div>
-                    <input id="natural-range" type="range">
-                    <button id="natural-reset" type="button">
+                    <input id="native-range" type="range">
+                    <button id="native-reset" type="button">
                         Reset 
                     </button>
                 </form>
@@ -72,6 +73,8 @@
         when their height is larger than their width</a>. Ironically, spectrum
         is more HTML5 compliant than the native rendering by most browsers, since
         to obtain a vertical range input you do just that:</p>
+
+        <input type="range" id="spectrum-demo2">
 
         <p><em>Under construction</em></p>
 

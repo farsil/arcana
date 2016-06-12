@@ -83,13 +83,13 @@ var Spectrum = {
         
         if (src.offsetWidth > src.offsetHeight)
         {
-            offset = e.pageX - Math.round(src.getBoundingClientRect().left);
+            offset = e.clientX - src.getBoundingClientRect().left;
             value = (offset - thumb.offsetWidth / 2) / 
                 (src.offsetWidth - thumb.offsetWidth);
         }
         else
         {
-            offset = e.pageY - Math.round(src.getBoundingClientRect().top);
+            offset = e.clientY - src.getBoundingClientRect().top;
             value = 1.0 - (offset - thumb.offsetHeight / 2) / 
                 (src.offsetHeight - thumb.offsetHeight);
         }
@@ -190,7 +190,7 @@ var Spectrum = {
         }
     },
 
-    attach : function(spectrumClass, query)
+    attach : function(skinClass, query)
     {   
         if (typeof query === "undefined")
             query = "input[type=range]";
@@ -205,26 +205,35 @@ var Spectrum = {
             var track = document.createElement("div");
             var spectrum = document.createElement("div");
 
-            thumb.className = "thumb";
-            fill.className = "fill"; 
-            track.className = "track";
-            spectrum.className = spectrumClass;
 
             if (element.offsetWidth >= element.offsetHeight)
             {
                 spectrum.style.width = element.offsetWidth + "px";
                 draw = Spectrum.hDraw;
+
+                spectrum.className = skinClass + " " + skinClass + "-horizontal";
+                thumb.className = "thumb thumb-horizontal";
+                fill.className = "fill fill-horizontal"; 
+                track.className = "track track-horizontal";
             }
             else
             {
                 spectrum.style.height = element.offsetHeight + "px";
                 draw = Spectrum.vDraw;
+
+                spectrum.className = skinClass + " " + skinClass + "-vertical";
+                thumb.className = "thumb thumb-vertical";
+                fill.className = "fill fill-vertical"; 
+                track.className = "track track-vertical";
             }
             
             // HTML5 defaults
             if (!element.min)  element.min = 0;
             if (!element.max)  element.max = 100;
             if (!element.step) element.step = 1;
+
+            if (!element.defaultValue) 
+                element.defaultValue = (element.max - element.min) / 2;
 
             element.dataset.value = element.value;
 

@@ -15,7 +15,7 @@ body
     padding: 0 15px;
 }
 
-span.mono
+.mono
 {
     font-family: Droid Sans Mono, monospace;
 }
@@ -25,22 +25,26 @@ h1, h2, h3
     line-height: 1.2;
 }
 
-form {
+form 
+{
     text-align: center;
     margin-bottom: 20px;
 }
 
-form label {
+form label 
+{
     margin: 0 4px;
 }
 
-form input[type=text] {
+form input[type=text] 
+{
     text-align: center;
     max-width: 30px;
     margin: 0 4px;
 }
 
-form input[type=range] {
+form input[type=range] 
+{
     width: 260px;
     display: block;
     padding-top: 2px;
@@ -48,49 +52,33 @@ form input[type=range] {
     background: inherit;
 }
 
-.table {
+.table 
+{
     display: table;
     text-align: center;
     width: 650px;
 }
 
-.tr {
-    display: table-row:
+.table > div 
+{
+    display: table-row;
 }
 
-.tr form, .tr h3 {
+#spectrum, #native, .table > div h3 
+{
     padding: 6px;
     display: table-cell;
     width: 270px;
 }
 
-.spectrum {
-    position: relative;
+#spectrum-demo2
+{
+    height: 100px;
+    width: 0px;
+}
+
+.spectrum.demo1
+{
     display: block;
-    padding: 6px 0;
     margin: 10px auto;
-}
-
-.spectrum .track {
-    width: inherit;
-    height: 8px;
-    border-radius: 4px;
-    background: #CCC;
-}
-
-.spectrum .thumb {
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    border-radius: 7px;
-    top: 3px;
-    background: #333;
-}
-
-.spectrum .fill {
-    position: absolute;
-    top: 6px;
-    height: 8px;
-    border-radius: 4px;
-    background: #333;
 }

@@ -4,9 +4,9 @@ function onSpectrumChange()
     text.value = this.value;
 }
 
-function onNaturalChange() 
+function onNativeChange() 
 {
-    text = document.getElementById('natural-change');
+    text = document.getElementById('native-change');
     text.value = this.value;
 }
 
@@ -16,15 +16,15 @@ function onSpectrumInput()
     text.value = this.value;
 }
 
-function onNaturalInput() 
+function onNativeInput() 
 {
-    text = document.getElementById('natural-input');
+    text = document.getElementById('native-input');
     text.value = this.value;
 }
 
 function resetSpectrum()
 {
-    range = document.getElementById('spectrum-range');
+    range = document.getElementById('spectrum-demo1');
     change = document.getElementById('spectrum-change');
     input = document.getElementById('spectrum-input');
 
@@ -33,20 +33,20 @@ function resetSpectrum()
     input.value = range.value;
 }
 
-function resetNatural()
+function resetNative()
 {
-    range = document.getElementById('natural-range');
-    change = document.getElementById('natural-change');
-    input = document.getElementById('natural-input');
+    range = document.getElementById('native-range');
+    change = document.getElementById('native-change');
+    input = document.getElementById('native-input');
 
     range.value = 50;
     change.value = range.value;
     input.value = range.value;
 }
 
-Spectrum.attach("spectrum", "#spectrum-range");
+Spectrum.attach("spectrum", "#spectrum-demo1, #spectrum-demo2");
 
-range = document.getElementById('spectrum-range');
+range = document.getElementById('spectrum-demo1');
 reset = document.getElementById('spectrum-reset');
 
 range.addEventListener("change", onSpectrumChange);
@@ -55,11 +55,11 @@ reset.addEventListener("click", resetSpectrum);
 
 resetSpectrum();
 
-range = document.getElementById('natural-range');
-reset = document.getElementById('natural-reset');
+range = document.getElementById('native-range');
+reset = document.getElementById('native-reset');
 
-range.addEventListener("change", onNaturalChange);
-range.addEventListener("input", onNaturalInput);
-reset.addEventListener("click", resetNatural);
+range.addEventListener("change", onNativeChange);
+range.addEventListener("input", onNativeInput);
+reset.addEventListener("click", resetNative);
 
-resetNatural();
+resetNative();

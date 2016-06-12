@@ -1,0 +1,72 @@
+.spectrum
+{
+    position: relative;
+    display: inline-block;
+}
+
+.spectrum-horizontal
+{
+    padding: 6px 0;
+}
+
+.spectrum-vertical
+{
+    padding: 0 6px;
+}
+
+.spectrum .track 
+{
+    border-radius: 4px;
+    background: #CCC;
+}
+
+.spectrum .track-horizontal
+{
+    height: 8px;
+    width: inherit;
+}
+
+.spectrum .track-vertical
+{
+    height: inherit;
+    width: 8px;
+}
+
+.spectrum .thumb 
+{
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    background: #333;
+}
+
+.spectrum .thumb-horizontal
+{
+    top: 3px;
+}
+
+.spectrum .thumb-vertical
+{
+    left: 3px;
+}
+
+.spectrum .fill 
+{
+    position: absolute;
+    border-radius: 4px;
+    background: #333;
+}
+
+.spectrum .fill-horizontal
+{
+    top: 6px;
+    height: 8px;
+}
+
+.spectrum .fill-vertical
+{
+    left: 6px;
+    bottom: 0;
+    width: 8px;
+}
